@@ -181,8 +181,22 @@ traumatologia.push(
 radiologia.shift();
 radiologia.pop();
 
+// Ejercicio 3 -recorrer consultas dentales
 
-//Agregar código para el desafio 2 aquí
+document.write("<hr/> <h3>Consultas médicas - dental</h3>");
+
+dental.forEach(consulta => {
+
+  document.write(
+    `<p> ${consulta.hora} - ${consulta.especialista} - ${consulta.paciente} - ${consulta.rut} - ${consulta.prevision}</p>`
+  );
+
+})
+
+document.write("<hr/>");
+
+
+
 
 document.write(
   `<p>Cantidad de atenciones para Radiología: ${radiologia.length}</p>`
