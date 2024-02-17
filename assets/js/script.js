@@ -137,7 +137,7 @@ const dental = [
 
 //Agregar código para el desafio 2 aquí
 
-// Ejercicio 1 - agregar elementos
+//* Ejercicio 1 - agregar elementos
 traumatologia.push(
   {
     hora: '09:00',
@@ -177,55 +177,58 @@ traumatologia.push(
   }
 );
 
-// Ejercicio 2 - eliminar primero y ultimo
+//* Ejercicio 2 - eliminar primero y ultimo
+
+// eliminamos el primer elemento del listado de radiologia
 radiologia.shift();
+
+// eliminamos el ultimo elemento del listado de radiologia
 radiologia.pop();
 
-// Ejercicio 3 -recorrer consultas dentales
+//* Ejercicio 3 - recorrer consultas dentales
 
-document.write("<hr/> <h3>Consultas médicas - dental</h3>");
+document.write("<hr/> <h3>Consultas médicas - Dental</h3>");
 
+// recorrimos el listado de consultas dental
 dental.forEach(consulta => {
 
+  // imprimimos cada consulta dentro de un parrafo
   document.write(
     `<p> ${consulta.hora} - ${consulta.especialista} - ${consulta.paciente} - ${consulta.rut} - ${consulta.prevision}</p>`
   );
-
 })
 
 document.write("<hr/>");
 
-
-
-// Ejercicio 4- imprimir listado total de los pacientes del centro médico.
+//* Ejercicio 4 - imprimir listado total de los pacientes del centro médico.
 
 document.write("<h3>Todos los pacientes</h3>");
 
-let consultas = radiologia.concat(traumatologia, dental);
+// unimos los listados de consultas en uno solo
+let todasLasConsultas = radiologia.concat(traumatologia, dental);
 
-consultas.forEach(consulta => {
+// recorremos el listado de todas las consultas
+todasLasConsultas.forEach(consulta => {
 
-  document.write(
-    `<p> ${consulta.paciente} </p>`
-  );
-
+  // imprimimos cada consulta dentro de un parrafo
+  document.write(`<p> ${consulta.paciente} </p>`);
 });
 
 document.write("<hr/>");
 
-// Ejercicio 5- filtrar pacientes con isapre en dental.
+//* Ejercicio 5 - filtrar pacientes con isapre en dental.
 
+// filtramos los pacientes con prevision ISAPRE
 const pacientesIsapre = dental.filter(paciente => {
   return paciente.prevision == 'ISAPRE';
 })
 
-// Ejecicio 6- filtrar pacientes con fonasa en traumatologia.
+//* Ejecicio 6 - filtrar pacientes con fonasa en traumatologia.
+
+// filtramos los pacientes con prevision FONASA
 const pacientesFonasa = traumatologia.filter(paciente => {
   return paciente.prevision == 'FONASA';
 })
-
-console.log(pacientesFonasa)
-
 
 
 document.write(
