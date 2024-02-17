@@ -213,6 +213,13 @@ consultas.forEach(consulta => {
 
 document.write("<hr/>");
 
+// Ejercicio 5- filtrar pacientes con isapre en dental.
+
+const pacientesIsapre = dental.filter(paciente => {
+  return paciente.prevision == 'ISAPRE';
+})
+
+
 
 document.write(
   `<p>Cantidad de atenciones para Radiología: ${radiologia.length}</p>`
