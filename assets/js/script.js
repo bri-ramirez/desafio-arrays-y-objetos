@@ -219,6 +219,13 @@ const pacientesIsapre = dental.filter(paciente => {
   return paciente.prevision == 'ISAPRE';
 })
 
+// Ejecicio 6- filtrar pacientes con fonasa en traumatologia.
+const pacientesFonasa = traumatologia.filter(paciente => {
+  return paciente.prevision == 'FONASA';
+})
+
+console.log(pacientesFonasa)
+
 
 
 document.write(
