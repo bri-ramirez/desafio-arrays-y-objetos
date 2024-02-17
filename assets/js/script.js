@@ -137,7 +137,7 @@ const dental = [
 
 //Agregar código para el desafio 2 aquí
 
-// Agregar horas a traumatología
+// Ejercicio 1 - agregar elementos
 traumatologia.push(
   {
     hora: '09:00',
@@ -177,8 +177,10 @@ traumatologia.push(
   }
 );
 
+// Ejercicio 2 - eliminar primero y ultimo
+radiologia.shift();
+radiologia.pop();
 
-console.log(traumatologia);
 
 //Agregar código para el desafio 2 aquí
 
