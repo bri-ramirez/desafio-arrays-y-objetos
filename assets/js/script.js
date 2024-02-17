@@ -197,6 +197,22 @@ document.write("<hr/>");
 
 
 
+// Ejercicio 4- imprimir listado total de los pacientes del centro médico.
+
+document.write("<h3>Todos los pacientes</h3>");
+
+let consultas = radiologia.concat(traumatologia, dental);
+
+consultas.forEach(consulta => {
+
+  document.write(
+    `<p> ${consulta.paciente} </p>`
+  );
+
+});
+
+document.write("<hr/>");
+
 
 document.write(
   `<p>Cantidad de atenciones para Radiología: ${radiologia.length}</p>`
